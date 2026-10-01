@@ -1,0 +1,14 @@
+export const DIMENSIONS = [
+  {id:'verdant',name:'Verdant Kingdom',range:'1–10',sky:['#67d8ff','#c7f4ff'],ground:'#4e9d4b',edge:'#8ee064',accent:'#ffe05c',hazard:'#dfe8f0',enemy:'#733da4',mechanic:'Foundations',description:'Rolling fields where every runner learns to leap.',gravity:0.82,wind:0},
+  {id:'dunes',name:'Sunscar Dunes',range:'11–20',sky:['#ffba61','#ffe1a0'],ground:'#b96d34',edge:'#f6c15d',accent:'#ff5f45',hazard:'#c96a29',enemy:'#8d3f28',mechanic:'Quicksand & wind',description:'Hot winds push across sinking sandstone.',gravity:0.84,wind:0.035},
+  {id:'frost',name:'Frostfall Expanse',range:'21–30',sky:['#79b8e8','#e7fbff'],ground:'#477ca2',edge:'#d8fbff',accent:'#7af5ff',hazard:'#9deeff',enemy:'#3654a5',mechanic:'Slippery ice',description:'Momentum matters on glass-blue ice.',gravity:0.78,wind:0},
+  {id:'jungle',name:'Emerald Wilds',range:'31–40',sky:['#1e9f74','#9de37d'],ground:'#28633e',edge:'#58bb57',accent:'#ffe56b',hazard:'#8be36b',enemy:'#a33d6d',mechanic:'Vines & bounce pads',description:'Living ruins spring, sway and bite.',gravity:0.84,wind:0},
+  {id:'volcano',name:'Cinder Core',range:'41–50',sky:['#641a2b','#ff6b3f'],ground:'#3a2022',edge:'#a94132',accent:'#ffcc4b',hazard:'#ff481f',enemy:'#d7302f',mechanic:'Lava pulses',description:'The mountain breathes beneath every step.',gravity:0.88,wind:0},
+  {id:'cyber',name:'Neon Grid',range:'51–60',sky:['#090b31','#31126b'],ground:'#162050',edge:'#00e7ff',accent:'#ff3bbf',hazard:'#fa3dff',enemy:'#5b67ff',mechanic:'Lasers & phase blocks',description:'A synthetic city rewrites the path in real time.',gravity:0.8,wind:0},
+  {id:'toxic',name:'Toxic Wastes',range:'61–70',sky:['#263b25','#a9b733'],ground:'#353c2e',edge:'#a4d631',accent:'#e6ff58',hazard:'#87dc25',enemy:'#6e348b',mechanic:'Poison vents',description:'Rusting machinery leaks clouds of luminous poison.',gravity:0.85,wind:-0.02},
+  {id:'void',name:'Astral Void',range:'71–80',sky:['#090925','#301562'],ground:'#20204b',edge:'#9378ff',accent:'#6ff4ff',hazard:'#cf63ff',enemy:'#7d67ff',mechanic:'Low gravity & gravity wells',description:'Broken islands drift between distant stars.',gravity:0.56,wind:0.012},
+  {id:'shadow',name:'Umbral Keep',range:'81–90',sky:['#080912','#28152f'],ground:'#242030',edge:'#755076',accent:'#ff4c91',hazard:'#a43f78',enemy:'#ce3f70',mechanic:'Darkness & vanishing floors',description:'Only nearby ground survives the consuming dark.',gravity:0.86,wind:0},
+  {id:'corrupt',name:'Corrupted Nexus',range:'91–100',sky:['#080818','#4a124f'],ground:'#251d35',edge:'#ff4d9d',accent:'#63f7ff',hazard:'#ff315e',enemy:'#ed386b',mechanic:'Reality shifts',description:'Every conquered rift collides at the end of the world.',gravity:0.9,wind:0.025}
+];
+
+export function dimensionFor(levelNumber){return DIMENSIONS[Math.min(9,Math.floor((levelNumber-1)/10))]}
